@@ -2,26 +2,25 @@
 some tools used usually in iOS development
 
 
-
-一、依赖管理：CocoaPods
-        CocoaPods已成为iOS开发事实上的依赖管理标准工具，可以大大节省设置和更新第三方开源库的时间。
+一、依赖管理工具：CocoaPods
+       CocoaPods已成为iOS开发事实上的依赖管理标准工具，可以大大节省设置和更新第三方开源库的时间。
        使用：
        集成CocoaPods后，在项目根目录创建Podfile文件，将第三方开源库依次以例如pod 'Reachability',  '~> 3.1.0'格式列在Podfile文件中，然后执行pod install，CocoaPods即可自动将相应第三方开源库源代码下载至工程中，且为工程设置好相应的系统依赖和编译参数。每次更改了Podfile文件后，需要重新执行一次pod update命令。
         原理：
         CocoaPods将所有的依赖库放到另一个名为Pods的项目中，然后让主项目依赖Pods项目，如此，源码管理工作从主项目转移到了Pods项目。
 
-二、API接口测试：Postman
-      Postman是一种网页调试与发送网页http请求工具，可方便地用于API测试。
+二、API接口测试工具：Postman
+       Postman是一种网页调试与发送网页http请求工具，可方便地用于API测试。
        优点：
        支持各种请求类型: get、post、put、patch、delete 等
        支持在线存储数据，通过账号可进行迁移数据
        支持请求 header 和请求参数的设置
        支持不同认证机制，包括 Basic Auth，Digest Auth，OAuth 1.0，OAuth 2.0 等
-        响应数据自动按照语法格式高亮，包括 HTML，JSON 和 XML
+       响应数据自动按照语法格式高亮，包括 HTML，JSON 和 XML
 
 三、网络封包分析工具：Charles
-         可从Charles官网http://www.charlesproxy.com下载安装Charles。
-         原理：
+       可从Charles官网http://www.charlesproxy.com下载安装Charles。
+       原理：
          Charles通过将自己设置成系统的网络访问代理服务器，使得所有的网络访问请求都通过它来完成，从而实现网络封包的截取和分析。
        功能：
          1、支持SSL代理。
@@ -37,7 +36,7 @@ some tools used usually in iOS development
         Flurry为移动应用提供数据统计和分析功能。可从官网http://www.flurry.com创建应用并下载SDK进行集成。
         Flurry能够统计出应用的使用情况，包括每天/周/日登陆用户、新用户、活跃用户数、应用使用次数及用户地区及移动设备版本、型号等信息。除此之外还可以通过提供的API进行针对性的统计。如统计某个按钮的点击、某个页面的停留时间等。另外，还可统计Crash情况。
       
-六、崩溃日志记录：Crashlytics（另有Bugly）
+六、崩溃日志记录工具：Crashlytics（另有Bugly）
        Crashlytics,专门为移动应用保存和分析应用崩溃信息的专业工具。可以全面记录崩溃信息且便于管理崩溃日志，分门别类且自动设置优先级。
       可在官网http://try.crashlytics.com申请账号、创建应用并下载集成SDK。
       平常也经常用到腾讯Bugly进行崩溃管理。
